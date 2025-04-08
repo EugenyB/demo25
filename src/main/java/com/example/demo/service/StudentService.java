@@ -29,4 +29,8 @@ public class StudentService {
            studentRepository.save(student);
         });
     }
+
+    public void addStudent(String name, int age, double rating) {
+        studentRepository.save(new Student(name, age, rating));
+    }
 }

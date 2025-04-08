@@ -37,5 +37,13 @@ public class StudentController {
         studentService.updateStudent(id, name, age, rating);
         return "redirect:/students";
     }
+
+    @PostMapping("/add")
+    public String addStudent(@RequestParam String name,
+                             @RequestParam int age,
+                             @RequestParam double rating) {
+        studentService.addStudent(name, age, rating);
+        return "redirect:/students";
+    }
 }
 
